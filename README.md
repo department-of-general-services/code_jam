@@ -39,9 +39,21 @@ Once you're in Google Colab, the following lines of code will get you started:
 	# attempt to read the .csv from the URL
 	archibus_raw = pd.read_csv(filepath_or_buffer=url, parse_dates=True)
 
-Now you have the data. All you have to do is write a function.
+Now you have the data. All you have to do is write a function. Remember that I've left you some clues in seventh exercises file, [which is here](https://colab.research.google.com/drive/1xrsjQJdQCTp7F27QNHLUx9WNVW6pHUym?usp=sharing).
+
+### Judging criteria  
+- __Clarity__. Is the code easy to read and follow, and properly documented?
+
+- __Robustness__. How does the code perform given different-quality inputs? Does it throw helpful errors when the input is bad?
+
+- __Concision__. If two functions both meet the first two criteria, we’ll choose the one with fewer lines of code.
+
+
+- __Originality__. It's OK to look at the interet for parts of your solution. But please don’t copy a complete solution from the internet.
 
 ### How to submit your function
-When you are satisfied that your function is robust, accurate, and well-documented, you'll need to push it to this repo!
+When you are satisfied that your function is robust, accurate, and well-documented, you'll need to push it to this repo! If you've never pushed code before, leave yourself 30 minutes or so to walk through it the first time. Eventually, if you keep at it, it will only take a moment to do this. 
+
+Full instructions on pushing code with GitHub Desktop [are here](https://github.com/department-of-general-services/style_guides_and_trainings/blob/master/how_to_push_code_jam_submissions.md).
  
 
