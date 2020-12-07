@@ -26,12 +26,10 @@ def adds_to_2020_brute_force(input_path):
 
     for entry in entries:
         rest_of_entries = [item for item in entries if item != entry]
-        for second_entry in rest_of_entries:
-            rest_of_entries = [item for item in entries if item != second_entry]
-            for third_entry in rest_of_entries:
-                if entry + second_entry + third_entry == 2020:
-                    # print(f"Found it! {entry}, {second_entry}, {third_entry}")
-                    return entry * second_entry * third_entry
+        for other in rest_of_entries:
+            if entry + other == 2020:
+                # print(f"Found it! {entry}, {other}")
+                return entry * other
 
 
 @timer
@@ -39,17 +37,15 @@ def adds_to_2020_combinations(input_path):
     entries = open(input_path).read().splitlines()
     entries = list(map(int, entries))
 
-    for trio in combinations(entries, r=3):
-        if sum(trio) == 2020:
-            # print(f"Found it! {trio[0]}, {trio[1]}, {trio[2]}")
-            return trio[0] * trio[1] * trio[2]
+    for pair in combinations(entries, r=2):
+        if sum(pair) == 2020:
+            # print(f"Found it! {pair[0]}, {pair[1]}")
+            return pair[0] * pair[1]
 
 
 if __name__ == "__main__":
-    input_path = Path.cwd() / "day_one" / "input_day_1.txt"
-    print("Running brute force method.")
+    input_path = Path.cwd() / "day_1" / "input_day_1.txt"
     answer = adds_to_2020_brute_force(input_path)
-    print(f"The answer is: {answer}")
-    print("Running itertools method.")
     answer = adds_to_2020_combinations(input_path)
+
     print(f"The answer is: {answer}")
