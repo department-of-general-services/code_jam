@@ -39,7 +39,7 @@ def is_password_legit_part_II(row):
 
 
 if __name__ == "__main__":
-    input_path = Path.cwd() / "day_two" / "input_day_2.txt"
+    input_path = Path.cwd() / "day_2" / "input_day_2.txt"
     passwords = open(input_path).read().splitlines()
     df = pd.DataFrame(passwords, columns=["raw_text"])
     df_split = df.apply(split_input, axis=1)
